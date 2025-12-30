@@ -11,7 +11,11 @@ import { Field, FieldLabel } from "@/components/ui/field";
 import ScrollToFormButton from "@/components/ScrollToFormButton";
 import { MapPin } from "lucide-react";
 import { Mail } from "lucide-react";
-import { Smartphone } from "lucide-react"
+import { Smartphone } from "lucide-react";
+import { BadgeCheck } from "lucide-react";
+import { Star } from "lucide-react";
+import { BriefcaseBusiness } from "lucide-react";
+import { Shield } from "lucide-react";
 
 export default function program(){
     return(
@@ -452,52 +456,54 @@ export default function program(){
             //You Will Be Able to
         }
         <div className="bg-[#FAFAFA] px-2  grid gap-4">
-            <div className="max-w-5xl mx-auto grid grid-cols-1 pt-10 gap-8">
+            <div className="max-w-5xl mx-auto grid grid-cols-1 pt-10 gap-1">
                 <h2 className="text-black text-center text-3xl">
                     After Completing the Medical Assistant Program, You Will Be Able to
                 </h2>
+                <p className="text-black text-center">
+                    Let CMVC help you prepare for your new career in healthcare!
+                </p>
             </div>
             <div className="max-w-5xl mx-auto grid sm:grid-cols-4 grid-cols-1 gap-8">
-                <div className="p-5 bg-[#FFFFFF]">
-                    <p className="text-4xl text-black">
-                        01
+                <div className="p-5 bg-[#FFFFFF] gap-1 grid content-start">
+                    <BadgeCheck size={50} className="py-1" color="#646464"/>
+                    <p className="text-black font-bold">
+                        Perform as an Entry-Level Medical Assistant
                     </p>
-                    <p className="text-black">
-                        Perform effectively as an entry-level medical assistant.
-                    </p>
-                </div>
-                <div className="p-5 bg-[#FFFFFF]">
-                    <p className="text-4xl text-black">
-                        02
-                    </p>
-                    <p className="text-black">
-                        Conduct medical assistant administrative and laboratory 
-                        procedures safely and competently.
+                    <p className="text-sm text-black">
+                        Confidently support clinical and administrative healthcare tasks.
                     </p>
                 </div>
-                <div className="p-5 bg-[#FFFFFF]">
-                    <p className="text-4xl text-black">
-                        03
+                <div className="p-5 bg-[#FFFFFF] gap-1 grid content-start">
+                    <Star size={50} className="py-1" color="#646464"/>
+                    <p className="text-black font-bold">
+                        Execute Administrative & Laboratory Procedures
                     </p>
-                    <p className="text-black">
-                        Practice within the legal and ethical boundaries 
-                        for medical assistants.
+                    <p className="text-sm text-black">
+                        Safely and competently handle medical office and lab responsibilities.
                     </p>
                 </div>
-                <div className="p-5 bg-[#FFFFFF]">
-                    <p className="text-4xl text-black">
-                        04
+                <div className="p-5 bg-[#FFFFFF] gap-1 grid content-start">
+                    <BriefcaseBusiness size={50} className="py-1" color="#646464"/>
+                    <p className="text-black font-bold">
+                        Practice Within Legal & Ethical Guidelines
                     </p>
-                    <p className="text-black">
-                        Communicate effectively with patients and 
-                        healthcare teams.
+                    <p className="text-sm text-black">
+                        Apply professional standards, laws, and ethical principles in healthcare settings.
+                    </p>
+                </div>
+                <div className="p-5 bg-[#FFFFFF] gap-1 grid content-start">
+                    <Shield size={50} className="py-1" color="#646464"/>
+                    <p className="text-black font-bold">
+                        Communicate Effectively in Healthcare Environments
+                    </p>
+                    <p className="text-sm text-black">
+                        Collaborate with patients, providers, and healthcare teams.
                     </p>
                 </div>
             </div>
             <div className="max-w-5xl mx-auto grid grid-cols-1 pb-10 gap-8">
-                <p className="text-black text-center">
-                    Let CMVC help you prepare for your new career in healthcare!
-                </p>
+                
             </div>
         </div>
 
