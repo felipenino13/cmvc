@@ -8,8 +8,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { Field, FieldLabel } from "@/components/ui/field";
-import { Button } from "@/components/ui/button";
 import ScrollToFormButton from "@/components/ScrollToFormButton";
+import { MapPin } from "lucide-react";
+import { Mail } from "lucide-react";
+import { Smartphone } from "lucide-react"
 
 export default function program(){
     return(
@@ -272,7 +274,7 @@ export default function program(){
                         height={600}
                     />
                 </div>
-                <div className="grid content-center">
+                <div className="grid content-center gap-4">
                     <h2 className="text-3xl text-black">
                         Medical Assistant Program Overview
                     </h2>
@@ -285,6 +287,11 @@ export default function program(){
                         terminology, physical examination techniques, vital signs, 
                         law and ethics, human anatomy, and more.
                     </p>
+                    <div>
+                        <ScrollToFormButton className="bg-[#013765] min-h-[44px]">
+                            Get More Information
+                        </ScrollToFormButton>
+                    </div>
                 </div>
             </div>
         </div>
@@ -294,7 +301,7 @@ export default function program(){
         }
         <div className="bg-[#013765] px-2">
             <div className="max-w-5xl mx-auto grid sm:grid-cols-2 grid-cols-1 gap-8 py-10 content-center">
-                <div className="grid content-center">
+                <div className="grid content-center gap-4">
                     <h2 className="text-white text-3xl">
                         Real Experience as a Medical Assistant
                     </h2>
@@ -304,6 +311,11 @@ export default function program(){
                         you’ll work in hospitals and medical centers to gain practical 
                         experience before you graduate.
                     </p>
+                    <div>
+                        <ScrollToFormButton className="bg-[#F8B132] min-h-[44px] text-black">
+                            Kickstart your career with us
+                        </ScrollToFormButton>
+                    </div>
                 </div>
                 <div>
                     <Image 
@@ -362,6 +374,11 @@ export default function program(){
                             connect you with real healthcare professionals.
                         </li>
                     </ul>
+                    <div>
+                        <ScrollToFormButton className="bg-[#013765] min-h-[44px]">
+                            Get More Information
+                        </ScrollToFormButton>
+                    </div>
                 </div>
             </div>
         </div>
@@ -371,7 +388,7 @@ export default function program(){
         }
         <div className="bg-[#FAFAFA] px-2">
             <div className="max-w-5xl mx-auto gap-8 grid sm:grid-cols-2 grid-cols-1 py-10">
-                <div className="content-center">
+                <div className="content-center gap-4 grid">
                     <h2 className="text-3xl text-black">
                         Expand Your Opportunities with Additional Certifications
                     </h2>
@@ -381,6 +398,11 @@ export default function program(){
                         in hospitals, clinics, and medical offices, making you a more 
                         competitive candidate in the healthcare industry.
                     </p>
+                    <div>
+                        <ScrollToFormButton className="bg-[#013765] min-h-[44px]">
+                            Start Your Career in Only 1 Year
+                        </ScrollToFormButton>
+                    </div>
                 </div>
                 <div>
                     <Image 
@@ -399,7 +421,7 @@ export default function program(){
         <div className="bg-[#FEB319] px-2">
             <div className="max-w-5xl mx-auto grid sm:grid-cols-2 grid-cols-1 gap-8 py-10">
                 <div className="content-center">
-                    <div className="bg-[#FFFFFF] p-10">
+                    <div className="bg-[#FFFFFF] p-10 gap-4 grid">
                         <h2 className="text-3xl text-black">
                             Admissions Requirements
                         </h2>
@@ -408,6 +430,11 @@ export default function program(){
                             If you have a passion for healthcare and a desire to succeed, you're 
                             a perfect fit for this program.
                         </p>
+                        <div>
+                            <ScrollToFormButton className="bg-[#013765] min-h-[44px]">
+                                Kickstart Your Career With Us
+                            </ScrollToFormButton>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -487,7 +514,7 @@ export default function program(){
                         height={600}
                     />
                 </div>
-                <div className="content-center">
+                <div className="content-center gap-4 grid">
                     <h2 className="text-3xl text-white">
                         Medical Assistant Program Tuition and Fees
                     </h2>
@@ -495,6 +522,11 @@ export default function program(){
                          Tuition and fees vary. Contact the CMVC bursar’s office for 
                          more details on payment plans and available financial aid options.
                     </p>
+                    <div>
+                        <ScrollToFormButton className="bg-[#F8B132] min-h-[44px] text-black">
+                            Get More Information
+                        </ScrollToFormButton>
+                    </div>
                 </div>
             </div>
         </div>
@@ -600,8 +632,8 @@ export default function program(){
             </div>
             <div className="max-w-5xl mx-auto gap-8 grid sm:grid-cols-3 grid-cols-1 ">
                 <div className="text-center">
-                    <p>
-                        Location
+                    <p className="flex justify-center items-center">
+                        <MapPin size={40} className="px-2"/> Location
                     </p>
                     <p>
                         8131 Lyndon B. Johnson, Suite 300, <br></br>
@@ -609,16 +641,16 @@ export default function program(){
                     </p>
                 </div>
                 <div className="text-center">
-                    <p>
-                        Email
+                    <p className="flex justify-center items-center">
+                        <Mail size={40} className="px-2"/> Email
                     </p>
                     <p>
                        dleonard@compumed.edu
                     </p>
                 </div>
                 <div className="text-center">
-                    <p>
-                        Phone
+                    <p className="flex justify-center items-center">
+                        <Smartphone size={40} className="px-2"/> Phone
                     </p>
                     <p>
                        972-301-8459
