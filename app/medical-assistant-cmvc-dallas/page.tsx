@@ -1,4 +1,15 @@
+"use client";
+
 import Image from "next/image";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Field, FieldLabel } from "@/components/ui/field";
+import { Button } from "@/components/ui/button";
+import ScrollToFormButton from "@/components/ScrollToFormButton";
 
 export default function program(){
     return(
@@ -7,7 +18,7 @@ export default function program(){
         {
             //Menu
         }
-        <div className="bg-[#013765] py-2 px-2">
+        <div className="py-2 px-2 absolute w-full">
             <div className="max-w-5xl mx-auto grid grid-cols-2">
                 <div>
                     <Image 
@@ -17,7 +28,7 @@ export default function program(){
                         height={80}
                     />
                 </div>
-                <div className="justify-end m-auto gap-8 sm:flex hidden ">
+                <div className="justify-end m-auto gap-8 sm:flex hidden text-sm">
                     <p>Program</p>
                     <p>Adavance Skills</p>
                     <p>Admissions & Tuition</p>
@@ -29,44 +40,160 @@ export default function program(){
         {
             //Banner Hero
         }
-        <div className="bg-[#324E81] px-2">
-            <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 py-20">
-                <div>
-                    <p>
-                        CMVC - Your School of Progress
-                    </p>
-                    <h1 className="text-5xl">
+        <div className="bg-[url(/programs/medical-assistant-dallas-00.jpg)] bg-cover bg-center px-2">
+            <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 pt-30 pb-20 gap-10">
+                <div className="content-center grid">
+
+                    <h1 className="text-6xl">
                         Medical Assistant Diploma
                     </h1>
-                    <p>
+                    <p className="text-lg">
                         Start your career in healthcare as a Medical Assistant
                     </p>
-                    <div className="grid grid-cols-3">
-                        <div>
-                            <p>
-                                Program Length<br></br>
-                                11 monts
-                            </p>
-                        </div>
-                        <div>
-                            <p>
-                                Total Credits<br></br>
-                                32.5
-                            </p>
-                        </div>
-                        <div>
-                            <p>
-                                Total Courses <br></br>
-                                14
-                            </p>
-                        </div>
-                    </div>
                 </div>
-                <div>
-                    <div className="bg-[#F3F3F3] p-10">
+                <div className="" id="formContact">
+                    <div className="bg-[#FFFFFF]/50 backdrop-blur-lg p-10">
                         <h2 className="text-black text-2xl text-center">
                             Start Now
                         </h2>
+                        <form>
+                            <div className="grid grid-cols-2 gap-2">
+                                <Field className="gap-1 mt-2">
+                                <FieldLabel className="text-black" htmlFor="form-field-name">
+                                    Name*
+                                </FieldLabel>
+                                <input
+                                    name="form-fields[name]"
+                                    id="form-field-name"
+                                    type="text"
+                                    placeholder="Name"
+                                    required
+                                    className="text-black border-none file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-[#FFFFFF]"
+                                />
+                                </Field>
+
+                                <Field className="gap-1 mt-2">
+                                <FieldLabel className="text-black" htmlFor="form-field-apellidos">
+                                    Lastname*
+                                </FieldLabel>
+                                <input
+                                    name="form_fields[apellidos]"
+                                    type="text"
+                                    id="form-field-apellidos"
+                                    placeholder="Lastname"
+                                    required
+                                    className="text-black border-none file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-[#FFFFFF]"
+                                />
+                                </Field>
+                            </div>
+                            
+                        
+
+                            <div className="grid grid-cols-1 gap-x-4">
+                                <Field className="gap-1 mt-2">
+                                <FieldLabel className="text-black" htmlFor="form-field-celular">
+                                    Phone*
+                                </FieldLabel>
+                                <div className="h-9 flex items-stretch w-full rounded-md border border-input bg-white overflow-hidden">
+                                    <div className="flex items-center gap-2 px-3 border-r border-input bg-white">
+                                    <img src="/icons/flag-UE.jpg" alt="Colombia" width={18} height={18} loading="lazy" />
+                                    <span className="text-sm font-medium text-black">+1</span>
+                                    </div>
+                                <input
+                                    name="form_fields[celular]"
+                                    id="form-field-celular"
+                                    placeholder="5551234567"
+                                    required
+                                    type="tel"
+                                    maxLength={10}
+                                    inputMode="numeric"
+                                    autoComplete="tel-national"
+                                    pattern="^[0-9]{10}$"
+                                    title="Escribe 10 dígitos (Ej: 3102345678)"
+                                    className="text-black border-none file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 h-9 w-full min-w-0 rounded-md px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-[#FFFFFF]"
+                                    onInput={(e) => {
+                                        const el = e.currentTarget;
+                                        el.value = el.value.replace(/\D/g, "").slice(0, 10);
+                                    }}
+                                />
+                                </div>
+                                
+                                </Field>
+                            </div>
+
+                            <div className="grid grid-cols-1 gap-x-4">
+                                <Field className="gap-1 mt-2">
+                                <FieldLabel className="text-black" htmlFor="email">
+                                    Email*
+                                </FieldLabel>
+                                <input
+                                    type="email"
+                                    className="text-black border-none file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-[#FFFFFF]"
+                                    name="email"
+                                    id="email"
+                                    placeholder="email@dominio.com"
+                                    required
+                                />
+                                </Field>
+                            </div>
+
+                            <div className="grid grid-cols-1 gap-x-4">
+                                <Field className="gap-1 mt-2">
+                                <FieldLabel className="text-black" htmlFor="form-field-zip">
+                                    Zipcode*
+                                </FieldLabel>
+                                <input
+                                    name="form_fields[zip]"
+                                    id="form-field-zip"
+                                    placeholder="12345"
+                                    required
+                                    type="text"
+                                    maxLength={5}
+                                    inputMode="numeric"
+                                    pattern="^[0-9]{5}$"
+                                    className="text-black border-none file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 h-9 w-full min-w-0 rounded-md px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-[#FFFFFF]"
+                                    onInput={(e) => {
+                                        const el = e.currentTarget;
+                                        el.value = el.value.replace(/\D/g, "").slice(0, 5);
+                                    }}
+                                />
+                                </Field>
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2">
+                                <Field className="gap-1 mt-2 hidden">
+                                <FieldLabel className="text-black" htmlFor="form-field-programa">
+                                    Program
+                                </FieldLabel>
+                                <input
+                                    name="form_fields[programa]"
+                                    type="hidden"
+                                    id="form-field-programa"
+                                    value="program"
+                                />
+                                </Field>
+
+                            </div>
+
+                            <div>
+                                <p className="text-center text-xs text-[#646464] py-2">
+                                    Clicking the <strong>"Send Request"</strong> button below constitutes your 
+                                    express written consent to be called and/or texted by CMVC 
+                                    at the number(s) provided.
+                                </p>
+                            </div>
+
+                            <div className="mx-auto text-center">
+                                    <button
+                                        className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive h-9 has-[>svg]:px-3 min-h-[44px] px-4 py-3 text-lg my-1 bg-[#ffc316] hover:bg-[#ffcf45] text-black hover:text-black"
+                                        type="submit"
+                                        id="buttonbunji"
+                                    >
+                                        Send Request
+                                    </button>
+                            </div>
+                            
+                        </form>
                     </div>
                 </div>
             </div>
@@ -77,22 +204,57 @@ export default function program(){
         }
         <div className="bg-[#FAFAFA] px-2">
             <div className="max-w-5xl mx-auto grid sm:grid-cols-2 grid-cols-1 py-10 gap-8">
-                <div>           
+                <div className="gap-4 grid content-center">           
                     <h2 className="text-3xl text-black">
                         Medical Assistant Program
                     </h2>
                     <p className="text-black">
-                        Objective: In this program, students are prepared with the 
+                        In this program, students are prepared with the 
                         technical skills and practical training necessary for entry-level 
                         positions as a Medical Assistant. Students will gain proficiency 
                         in performing a variety of clinical and administrative duties 
                         to assist physicians and ensure efficient healthcare delivery.
                     </p>
-                </div>
-                <div className="content-center">
                     <p className="text-black">
                         Graduate without federal student loan debt
                     </p>
+                    <div>
+                        <ScrollToFormButton className="bg-[#013765] min-h-[44px]">
+                            More Info
+                        </ScrollToFormButton>
+                    </div>
+                </div>
+                <div className="content-center">
+                    <div className="bg-[#FFFFFF]">
+                        <div>
+                            <Image 
+                                src="/programs/medical-assistant-dallas-08.jpg"
+                                alt="Medical Assistant Dallas Program"
+                                width={1200}
+                                height={600}
+                            />
+                        </div>
+                        <div className="grid grid-cols-3 text-black p-4 text-sm">
+                            <div>
+                                <p>
+                                    Program Length<br></br>
+                                    <span className="text-2xl">11 monts</span>
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                    Total Credits<br></br>
+                                    <span className="text-2xl">32.5</span>
+                                </p>
+                            </div>
+                            <div>
+                                <p>
+                                    Total Courses <br></br>
+                                    <span className="text-2xl">14</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -169,34 +331,35 @@ export default function program(){
                 </div>
                 <div className="content-center grid gap-4">
                     <h2 className="text-3xl text-black">
-                        What You Will Learn in this Program
+                        Ready to Get Started? Here’s What You’ll Learn
                     </h2>
                     <p className="text-black">
-                        The Medical Assistant program offers students an externship opportunity 
-                        where you will gain valuable insight into career options and develop 
-                        foundational relationships with healthcare professionals. Some of the 
-                        key topics covered include:
+                        This Medical Assistant program is designed to prepare you for real-world 
+                        healthcare environments.<br></br>
+                        <strong>In approximately 45 weeks (915 clock hours),</strong> you’ll gain hands-on experience, 
+                        foundational medical knowledge, and the professional skills needed to 
+                        confidently enter the healthcare field.
                     </p>
                     <ul className="pl-5 text-black text-sm list-image-[url(/icons/check-icon.svg)]">
                         <li>
-                            Introductory Lab Courses: Learn about urinalysis, microbiology, 
-                            radiology, and their relevance to medical assistant tasks, such 
-                            as specimen collection and blood drawing.
+                            Clinical & Lab Skills – Blood draws, specimen handling, wound 
+                            care, injections, and patient assistance.
                         </li>
                         <li>
-                            Medication Administration: Understand procedural requirements, 
-                            electronic healthcare records, professionalism, and cultural 
-                            sensitivity.
+                            Medical Office & Administrative Skills – EHR management, medical 
+                            documentation, scheduling, and office procedures.
                         </li>
                         <li>
-                            Laws and Ethics: Learn about legal and ethical considerations 
-                            in medical assistant practices, along with the pre-employment 
-                            skills and work maturity necessary for success.
+                            Medication & Patient Care – Safe medication administration, 
+                            patient interaction, and exam support.
                         </li>
                         <li>
-                            Laws and Ethics: Learn about legal and ethical considerations 
-                            in medical assistant practices, along with the pre-employment 
-                            skills and work maturity necessary for success.
+                            Professional & Ethical Foundations – Medical laws, ethics, 
+                            professionalism, and cultural sensitivity.
+                        </li>
+                        <li>
+                            Career-Focused Experience – Externship opportunities that 
+                            connect you with real healthcare professionals.
                         </li>
                     </ul>
                 </div>
@@ -226,49 +389,6 @@ export default function program(){
                         width={1400}
                         height={600}
                     />
-                </div>
-            </div>
-        </div>
-        
-        {
-        //Ready to Get Started
-        //(esta seccion tiene la misma informacion que "Learn in this program" y que "Hero")
-        }
-
-        <div className="bg-[#FFFFFF] px-2">
-            <div className="max-w-5xl mx-auto grid sm:grid-cols-2 grid-cols-1 py-10">
-                <div>
-                    <Image 
-                        src="/programs/medical-assistant-dallas-05.jpg"
-                        alt="Medical Assistant Dallas Program"
-                        width={1400}
-                        height={600}
-                    />
-                </div>
-                <div className="content-center gap-4 grid">
-                    <h2 className="text-black text-3xl">
-                        Ready to Get Started?
-                    </h2>
-                    <p className="text-black">
-                        The program duration is approximately 45 weeks, requiring 915 clock hours. 
-                        The program allows students to prepare for real-world medical assistant tasks 
-                        while gaining insight into the healthcare field. Some of the topics 
-                        covered include:
-                    </p>
-                    <ul className="pl-5 text-black text-sm list-image-[url(/icons/check-icon.svg)]">
-                        <li>
-                            Introductory Courses and Labs: Learn about lab testing, drawing blood, 
-                            and specimen handling.
-                        </li>
-                        <li>
-                            Administrative Skills: Gain knowledge in medical office procedures, 
-                            medication administration, and EHR management.
-                        </li>
-                        <li>
-                            Clinical Skills: Learn wound care, injections, assisting with exams, 
-                            and more.
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
@@ -398,7 +518,7 @@ export default function program(){
         {
             //FAQ
         }
-        <div className="bg-[#FAFAFA]">
+        <div className="bg-[#FAFAFA] px-2">
             <div className="max-w-2xl mx-auto py-10 gap-8 grid">
                 <div>
                     <h2 className="text-black text-center text-3xl">
@@ -406,21 +526,105 @@ export default function program(){
                     </h2>
                 </div>
                 <div className="grid gap-4">
+                    <Accordion type="single" collapsible className="w-full text-black">
+                        <AccordionItem value="item-1">
+                            <AccordionTrigger>Is the Medical Assisting program difficult?</AccordionTrigger>
+                            <AccordionContent>
+                                The coursework can be challenging, but our instructors are here 
+                                to help you succeed. They are experienced professionals in the field.
+                            </AccordionContent>
+                        </AccordionItem>
+
+                        <AccordionItem value="item-2">
+                            <AccordionTrigger>Can a medical assistant be a health coach?</AccordionTrigger>
+                            <AccordionContent>
+                                While medical assistants provide some health guidance, becoming a health 
+                                coach requires separate certification. Our program covers many of the foundational topics.
+                            </AccordionContent>
+                        </AccordionItem>
+
+                        <AccordionItem value="item-3">
+                            <AccordionTrigger>Should I become a medical assistant?</AccordionTrigger>
+                            <AccordionContent>
+                                Yes! The healthcare industry is growing, and medical assistants are in high demand. You will 
+                                have job opportunities in hospitals, clinics, and doctors' offices.
+                            </AccordionContent>
+                        </AccordionItem>
+
+                        <AccordionItem value="item-4">
+                            <AccordionTrigger>How long does it take to become a medical assistant?</AccordionTrigger>
+                            <AccordionContent>
+                                It takes about 11 months to complete this program.
+                            </AccordionContent>
+                        </AccordionItem>
+
+                        <AccordionItem value="item-5">
+                            <AccordionTrigger>What are the qualifications to be a medical assistant?</AccordionTrigger>
+                            <AccordionContent>
+                                You must be at least 18 years old, have a high school diploma or equivalent, and 
+                                complete an accredited medical assistant program.
+                            </AccordionContent>
+                        </AccordionItem>
+
+                        <AccordionItem value="item-6">
+                            <AccordionTrigger>What are the duties of a medical assistant?</AccordionTrigger>
+                            <AccordionContent>
+                                Medical assistants perform clinical tasks like taking vital signs, preparing 
+                                patients for exams, assisting physicians, and handling administrative tasks such 
+                                as scheduling appointments and maintaining patient records.
+                            </AccordionContent>
+                        </AccordionItem>
+
+                    </Accordion>
+
                     <div>
                         <p className="text-1xl text-black">
-                            Is the Medical Assisting program difficult?
+                            
                         </p>
                         <p className="text-black">
-                            The coursework can be challenging, but our instructors are here 
-                            to help you succeed. They are experienced professionals in the field.
+                            
                         </p>    
                     </div>
                 </div>
             </div>
         </div>
 
-        <div className="bg-[#013765]">
-            Contact Campus
+        {
+            //Contact Campus
+        }
+        <div className="bg-[#013765] px-2 py-10 grid gap-8">
+            <div className="max-w-5xl mx-auto gap-8 grid grid-cols-1">
+                <h2 className="text-center text-3xl">
+                    CMVC Dallas Campus
+                </h2>
+            </div>
+            <div className="max-w-5xl mx-auto gap-8 grid sm:grid-cols-3 grid-cols-1 ">
+                <div className="text-center">
+                    <p>
+                        Location
+                    </p>
+                    <p>
+                        8131 Lyndon B. Johnson, Suite 300, <br></br>
+                        Dallas, Texas
+                    </p>
+                </div>
+                <div className="text-center">
+                    <p>
+                        Email
+                    </p>
+                    <p>
+                       dleonard@compumed.edu
+                    </p>
+                </div>
+                <div className="text-center">
+                    <p>
+                        Phone
+                    </p>
+                    <p>
+                       972-301-8459
+                    </p>
+                </div>
+            </div>
         </div>
 
         </>
