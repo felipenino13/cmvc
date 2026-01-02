@@ -21,7 +21,7 @@ type ProgramInput = Omit<Program, "slug"> & { slug?: string };
 function makeProgram(data: ProgramInput): Program {
   return {
     ...data,
-    slug: data.slug ?? slugify(data.title),
+    slug: data.slug ?? slugify(data.title + "-"+ data.campus),
   };
 };
 

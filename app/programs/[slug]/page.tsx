@@ -102,7 +102,7 @@ export default async function ProgramPage({ params }: Props) {
         }
         <div className="bg-[url(/programs/medical-assistant-dallas-00.jpg)] bg-cover bg-center px-2">
             <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 pt-30 pb-20 gap-10">
-                <div className="content-center grid">
+                <div className="content-center grid gap-2">
 
                     <h1 className="text-6xl text-white">
                         Medical Assistant Diploma
@@ -110,6 +110,7 @@ export default async function ProgramPage({ params }: Props) {
                     <p className="text-lg text-white">
                         Start your career in healthcare as a Medical Assistant
                     </p>
+                    <p className="text-[#FFC316]">Graduate without federal student loan debt</p>
                 </div>
                 <div className="" id="formContact">
                     <div className="bg-[#FFFFFF]/50 backdrop-blur-lg p-10">
@@ -129,21 +130,29 @@ export default async function ProgramPage({ params }: Props) {
             <div className="max-w-5xl mx-auto grid sm:grid-cols-2 grid-cols-1 py-10 gap-8">
                 <div className="gap-4 grid content-center">           
                     <h2 className="text-3xl text-black">
-                        Medical Assistant Program
+                        What the Medical Assistant Program Prepares You For
                     </h2>
                     <p className="text-black">
-                        In this program, students are prepared with the 
-                        technical skills and practical training necessary for entry-level 
-                        positions as a Medical Assistant. Students will gain proficiency 
-                        in performing a variety of clinical and administrative duties 
-                        to assist physicians and ensure efficient healthcare delivery.
+                        The Medical Assistant Program prepares students with the technical 
+                        and hands-on skills needed for entry-level positions in healthcare. 
+                        Through a combination of clinical training and administrative coursework, 
+                        students gain real-world experience to confidently support physicians 
+                        and healthcare teams.
                     </p>
-                    <p className="text-black">
-                        Graduate without federal student loan debt
-                    </p>
+                    <ul className="pl-5 text-black text-sm list-image-[url(/icons/check-icon.svg)]">
+                        <li>
+                            Hands-on clinical and laboratory training
+                        </li>
+                        <li>
+                            Medical office & administrative procedures
+                        </li>
+                        <li>
+                            Preparation for entry-level employment in healthcare
+                        </li>
+                    </ul>
                     <div>
                         <ScrollToFormButton className="bg-[#013765] min-h-[44px]">
-                            More Info
+                            Get More Information
                         </ScrollToFormButton>
                     </div>
                 </div>
@@ -183,48 +192,13 @@ export default async function ProgramPage({ params }: Props) {
         </div>
 
         {
-            //Overview program
-        }
-        <div className="bg-[#FFFFFF] px-2">
-            <div className="max-w-5xl mx-auto grid sm:grid-cols-2 grid-cols-1 py-10 gap-8">
-                <div>
-                    <Image 
-                        src="/programs/medical-assistant-dallas-01.jpg"
-                        alt="Medical Assistant Dallas Program"
-                        width={1200}
-                        height={600}
-                    />
-                </div>
-                <div className="grid content-center gap-4">
-                    <h2 className="text-3xl text-black">
-                        Medical Assistant Program Overview
-                    </h2>
-                    <p className="text-black">
-                        Our Medical Assistant Program is designed to help you advance 
-                        your career and open doors to employment in the medical field. 
-                        The program combines medical assistant coursework with general 
-                        education classes to provide you with an Associate of Science 
-                        in Medical Assisting. Some of the key courses include medical 
-                        terminology, physical examination techniques, vital signs, 
-                        law and ethics, human anatomy, and more.
-                    </p>
-                    <div>
-                        <ScrollToFormButton className="bg-[#013765] min-h-[44px]">
-                            Get More Information
-                        </ScrollToFormButton>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        {
             //Real Experience
         }
         <div className="bg-[#013765] px-2">
             <div className="max-w-5xl mx-auto grid sm:grid-cols-2 grid-cols-1 gap-8 py-10 content-center">
                 <div className="grid content-center gap-4">
                     <h2 className="text-white text-3xl">
-                        Real Experience as a Medical Assistant
+                        Gain Real-World Experience Before You Graduate
                     </h2>
                     <p className="text-white">
                         At CompuMed, you’ll gain hands-on experience as part of the program, 
@@ -234,7 +208,7 @@ export default async function ProgramPage({ params }: Props) {
                     </p>
                     <div>
                         <ScrollToFormButton className="bg-[#F8B132] min-h-[44px] text-black">
-                            Kickstart your career with us
+                            Start Your Career Today
                         </ScrollToFormButton>
                     </div>
                 </div>
@@ -264,7 +238,7 @@ export default async function ProgramPage({ params }: Props) {
                 </div>
                 <div className="content-center grid gap-4">
                     <h2 className="text-3xl text-black">
-                        Ready to Get Started? Here’s What You’ll Learn
+                        What You’ll Actually Learn and Practice in This Program
                     </h2>
                     <p className="text-black">
                         This Medical Assistant program is designed to prepare you for real-world 
@@ -311,7 +285,7 @@ export default async function ProgramPage({ params }: Props) {
             <div className="max-w-5xl mx-auto gap-8 grid sm:grid-cols-2 grid-cols-1 py-10">
                 <div className="content-center gap-4 grid">
                     <h2 className="text-3xl text-black">
-                        Expand Your Opportunities with Additional Certifications
+                        Expand Your Career Opportunities with Additional Certifications
                     </h2>
                     <p className="text-black">
                         In addition to the Medical Assistant Diploma, you will get knowledge 
@@ -321,7 +295,7 @@ export default async function ProgramPage({ params }: Props) {
                     </p>
                     <div>
                         <ScrollToFormButton className="bg-[#013765] min-h-[44px]">
-                            Start Your Career in Only 1 Year
+                            Get More Information
                         </ScrollToFormButton>
                     </div>
                 </div>
@@ -344,16 +318,19 @@ export default async function ProgramPage({ params }: Props) {
                 <div className="content-center">
                     <div className="bg-[#FFFFFF] p-10 gap-4 grid">
                         <h2 className="text-3xl text-black">
-                            Admissions Requirements
+                            Admissions Requirements: You May Already Qualify
                         </h2>
                         <p className="text-black">
+                            <strong>If you’re motivated and ready to start, you may already qualify.</strong>
+                        </p>
+                        <p className="text-black">
                             We consider your prior academic experience during the admissions process. 
-                            If you have a passion for healthcare and a desire to succeed, you' re 
+                            If you have a passion for healthcare and a desire to succeed, you’ re 
                             a perfect fit for this program.
                         </p>
                         <div>
                             <ScrollToFormButton className="bg-[#013765] min-h-[44px]">
-                                Kickstart Your Career With Us
+                                Get More Information
                             </ScrollToFormButton>
                         </div>
                     </div>
@@ -375,7 +352,7 @@ export default async function ProgramPage({ params }: Props) {
         <div className="bg-[#FAFAFA] px-2  grid gap-4">
             <div className="max-w-5xl mx-auto grid grid-cols-1 pt-10 gap-1">
                 <h2 className="text-black text-center text-3xl">
-                    After Completing the Medical Assistant Program, You Will Be Able to
+                    What You’ll Be Ready to Do After Completing the Program
                 </h2>
                 <p className="text-black text-center">
                     Let CMVC help you prepare for your new career in healthcare!
@@ -439,7 +416,7 @@ export default async function ProgramPage({ params }: Props) {
                 </div>
                 <div className="content-center gap-4 grid">
                     <h2 className="text-3xl text-white">
-                        Medical Assistant Program Tuition and Fees
+                        Tuition, Fees, and Financial Options
                     </h2>
                     <p className="text-white">
                          Tuition and fees vary. Contact the CMVC bursar’s office for 
@@ -447,7 +424,7 @@ export default async function ProgramPage({ params }: Props) {
                     </p>
                     <div>
                         <ScrollToFormButton className="bg-[#F8B132] min-h-[44px] text-black">
-                            Get More Information
+                            Talk to admissions about tuition options
                         </ScrollToFormButton>
                     </div>
                 </div>
@@ -458,9 +435,9 @@ export default async function ProgramPage({ params }: Props) {
             //Employment Assistance
         }
         <div className="bg-[#FFFFFF] px-2">
-            <div className="max-w-2xl mx-auto py-10">
+            <div className="max-w-2xl mx-auto py-20 gap-4 grid">
                 <h2 className="text-3xl text-black text-center">
-                    Employment Assistance
+                    Career Support After Graduation
                 </h2>
                 <p className="text-black text-center">
                     While employment is not guaranteed, our Job Placement Department provides 
@@ -502,7 +479,7 @@ export default async function ProgramPage({ params }: Props) {
                             <AccordionTrigger>Should I become a medical assistant?</AccordionTrigger>
                             <AccordionContent>
                                 Yes! The healthcare industry is growing, and medical assistants are in high demand. You will 
-                                have job opportunities in hospitals, clinics, and doctors' offices.
+                                have job opportunities in hospitals, clinics, and doctors&apos; offices.
                             </AccordionContent>
                         </AccordionItem>
 
@@ -532,14 +509,6 @@ export default async function ProgramPage({ params }: Props) {
 
                     </Accordion>
 
-                    <div>
-                        <p className="text-1xl text-black">
-                            
-                        </p>
-                        <p className="text-black">
-                            
-                        </p>    
-                    </div>
                 </div>
             </div>
         </div>
@@ -550,7 +519,7 @@ export default async function ProgramPage({ params }: Props) {
         <div className="bg-[#013765] px-2 py-10 grid gap-8">
             <div className="max-w-5xl mx-auto gap-8 grid grid-cols-1">
                 <h2 className="text-center text-3xl text-white">
-                    CMVC Dallas Campus
+                    Visit or Contact the CMVC Dallas Campus
                 </h2>
             </div>
             <div className="max-w-5xl mx-auto gap-8 grid sm:grid-cols-3 grid-cols-1 ">

@@ -126,7 +126,7 @@ export default function FormLanding(){
         
                                     <div>
                                         <p className="text-center text-xs text-[#646464] py-2">
-                                            Clicking the <strong>"Send Request"</strong> button below constitutes your 
+                                            Clicking the <strong>&quot;Send Request&quot;</strong> button below constitutes your 
                                             express written consent to be called and/or texted by CMVC 
                                             at the number(s) provided.
                                         </p>
