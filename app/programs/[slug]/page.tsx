@@ -100,16 +100,29 @@ export default async function ProgramPage({ params }: Props) {
         {
             //Banner Hero
         }
-        <div className="bg-[url(/programs/medical-assistant-dallas-00.jpg)] bg-cover bg-center px-2">
+        <div className="px-2">
+            <Image
+                src={program.imgHero}
+                alt={program.title}
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 1200px"
+                className="object-cover z-[-1]"
+                fetchPriority="high"
+                quality={65}
+            />
             <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 pt-30 pb-20 gap-10">
                 <div className="content-center grid gap-2">
 
                     <h1 className="text-6xl text-white">
-                        Medical Assistant Diploma
+                        {program.title}
                     </h1>
-                    <p className="text-lg text-white">
-                        Start your career in healthcare as a Medical Assistant
-                    </p>
+                    {program.subtitle && (
+                        <p className="text-lg text-white">
+                            {program.subtitle}
+                        </p>
+                    )}
+                    
                     <p className="text-[#FFC316]">Graduate without federal student loan debt</p>
                 </div>
                 <div className="" id="formContact">
@@ -128,28 +141,27 @@ export default async function ProgramPage({ params }: Props) {
         }
         <div className="bg-[#FAFAFA] px-2">
             <div className="max-w-5xl mx-auto grid sm:grid-cols-2 grid-cols-1 py-10 gap-8">
-                <div className="gap-4 grid content-center">           
+                <div className="gap-4 grid content-center"> 
+                    {program.descriptionProgram.descriptionTitle && (
                     <h2 className="text-3xl text-black">
-                        What the Medical Assistant Program Prepares You For
+                        {program.descriptionProgram.descriptionTitle}    
                     </h2>
-                    <p className="text-black">
-                        The Medical Assistant Program prepares students with the technical 
-                        and hands-on skills needed for entry-level positions in healthcare. 
-                        Through a combination of clinical training and administrative coursework, 
-                        students gain real-world experience to confidently support physicians 
-                        and healthcare teams.
-                    </p>
-                    <ul className="pl-5 text-black text-sm list-image-[url(/icons/check-icon.svg)]">
-                        <li>
-                            Hands-on clinical and laboratory training
-                        </li>
-                        <li>
-                            Medical office & administrative procedures
-                        </li>
-                        <li>
-                            Preparation for entry-level employment in healthcare
-                        </li>
-                    </ul>
+                    )}          
+                    {program.descriptionProgram.description && (
+                        <p className="text-black">
+                            {program.descriptionProgram.description}
+                        </p>  
+                    )}
+                    {program.descriptionProgram.description.length > 0 &&(
+                        <ul className="pl-5 text-black text-sm list-image-[url(/icons/check-icon.svg)]">
+                            {program.descriptionProgram.bulletsDescription.map((bullet, index) =>(
+                                <li key={index}>
+                                    {bullet}
+                                </li>
+                            )) }
+                        </ul>
+                    )}
+                    
                     <div>
                         <ScrollToFormButton className="bg-[#013765] min-h-[44px]">
                             Get More Information
@@ -160,31 +172,37 @@ export default async function ProgramPage({ params }: Props) {
                     <div className="bg-[#FFFFFF]">
                         <div>
                             <Image 
-                                src="/programs/medical-assistant-dallas-08.jpg"
+                                src={program.descriptionProgram.descriptionImg}
                                 alt="Medical Assistant Dallas Program"
                                 width={1200}
                                 height={600}
                             />
                         </div>
                         <div className="grid grid-cols-3 text-black p-4 text-sm">
-                            <div>
-                                <p>
-                                    Program Length<br></br>
-                                    <span className="text-2xl">11 monts</span>
-                                </p>
-                            </div>
-                            <div>
-                                <p>
-                                    Total Credits<br></br>
-                                    <span className="text-2xl">32.5</span>
-                                </p>
-                            </div>
-                            <div>
-                                <p>
-                                    Total Courses <br></br>
-                                    <span className="text-2xl">14</span>
-                                </p>
-                            </div>
+                            {program.programLength && (
+                                <div>
+                                    <p>
+                                        Program Length<br></br>
+                                        <span className="text-2xl">{program.programLength}</span>
+                                    </p>
+                                </div>
+                            )}
+                            {program.totalCredits && (
+                                <div>
+                                    <p>
+                                        Total Credits<br></br>
+                                        <span className="text-2xl">{program.totalCredits}</span>
+                                    </p>
+                                </div>
+                            )}
+                            {program.totalCourses && (
+                                <div>
+                                    <p>
+                                        Total Courses <br></br>
+                                        <span className="text-2xl">{program.totalCourses}</span>
+                                    </p>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
@@ -314,15 +332,12 @@ export default async function ProgramPage({ params }: Props) {
             //Admissions Requirements
         }
         <div className="bg-[#FEB319] px-2">
-            <div className="max-w-5xl mx-auto grid sm:grid-cols-2 grid-cols-1 gap-8 py-10">
+            <div className="max-w-5xl mx-auto grid sm:grid-cols-2 grid-cols-1 gap-8">
                 <div className="content-center">
                     <div className="bg-[#FFFFFF] p-10 gap-4 grid">
                         <h2 className="text-3xl text-black">
-                            Admissions Requirements: You May Already Qualify
+                            If you’re motivated and ready to start, you may already qualify.
                         </h2>
-                        <p className="text-black">
-                            <strong>If you’re motivated and ready to start, you may already qualify.</strong>
-                        </p>
                         <p className="text-black">
                             We consider your prior academic experience during the admissions process. 
                             If you have a passion for healthcare and a desire to succeed, you’ re 
@@ -519,7 +534,7 @@ export default async function ProgramPage({ params }: Props) {
         <div className="bg-[#013765] px-2 py-10 grid gap-8">
             <div className="max-w-5xl mx-auto gap-8 grid grid-cols-1">
                 <h2 className="text-center text-3xl text-white">
-                    Visit or Contact the CMVC Dallas Campus
+                    Visit or Contact the CMVC {program.campus} Campus
                 </h2>
             </div>
             <div className="max-w-5xl mx-auto gap-8 grid sm:grid-cols-3 grid-cols-1 ">
