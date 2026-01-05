@@ -50,7 +50,7 @@ export default function program(){
         {
             //Banner Hero
         }
-        <div className="bg-[url(/programs/medical-assistant-dallas-00.jpg)] bg-cover bg-center px-2">
+        <div className="bg-[url(/programs/medical-assistant-dallas-hero.jpg)] bg-cover bg-center px-2">
             <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 pt-30 pb-20 gap-10">
                 <div className="content-center grid">
 

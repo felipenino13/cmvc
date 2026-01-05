@@ -10,8 +10,8 @@ export default function ProgramsPage(){
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {PROGRAMS.map((p) => (
             <div key={p.slug} className="border rounded-lg p-6">
+                <p className="text-xs text-gray-600 uppercase tracking-[2]">{p.campus}</p>
                 <h2 className="text-xl font-semibold">{p.title}</h2>
-                <p className="text-gray-600">{p.description}</p>
 
                 <Link
                 href={`/programs/${p.slug}`}

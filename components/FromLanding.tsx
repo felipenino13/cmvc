@@ -8,7 +8,7 @@ export default function FormLanding(){
         <form>
                                     <div className="grid grid-cols-2 gap-2">
                                         <Field className="gap-1 mt-2">
-                                        <FieldLabel className="text-black" htmlFor="form-field-name">
+                                        <FieldLabel className="text-white" htmlFor="form-field-name">
                                             Name*
                                         </FieldLabel>
                                         <input
@@ -22,7 +22,7 @@ export default function FormLanding(){
                                         </Field>
         
                                         <Field className="gap-1 mt-2">
-                                        <FieldLabel className="text-black" htmlFor="form-field-apellidos">
+                                        <FieldLabel className="text-white" htmlFor="form-field-apellidos">
                                             Lastname*
                                         </FieldLabel>
                                         <input
@@ -40,7 +40,7 @@ export default function FormLanding(){
         
                                     <div className="grid grid-cols-1 gap-x-4">
                                         <Field className="gap-1 mt-2">
-                                        <FieldLabel className="text-black" htmlFor="form-field-celular">
+                                        <FieldLabel className="text-white" htmlFor="form-field-celular">
                                             Phone*
                                         </FieldLabel>
                                         <div className="h-9 flex items-stretch w-full rounded-md border border-input bg-white overflow-hidden">
@@ -72,7 +72,7 @@ export default function FormLanding(){
         
                                     <div className="grid grid-cols-1 gap-x-4">
                                         <Field className="gap-1 mt-2">
-                                        <FieldLabel className="text-black" htmlFor="email">
+                                        <FieldLabel className="text-white" htmlFor="email">
                                             Email*
                                         </FieldLabel>
                                         <input
@@ -88,7 +88,7 @@ export default function FormLanding(){
         
                                     <div className="grid grid-cols-1 gap-x-4">
                                         <Field className="gap-1 mt-2">
-                                        <FieldLabel className="text-black" htmlFor="form-field-zip">
+                                        <FieldLabel className="text-white" htmlFor="form-field-zip">
                                             Zipcode*
                                         </FieldLabel>
                                         <input
@@ -111,7 +111,7 @@ export default function FormLanding(){
         
                                     <div className="grid grid-cols-1 sm:grid-cols-2">
                                         <Field className="gap-1 mt-2 hidden">
-                                        <FieldLabel className="text-black" htmlFor="form-field-programa">
+                                        <FieldLabel className="text-white" htmlFor="form-field-programa">
                                             Program
                                         </FieldLabel>
                                         <input
@@ -125,7 +125,7 @@ export default function FormLanding(){
                                     </div>
         
                                     <div>
-                                        <p className="text-center text-xs text-[#646464] py-2">
+                                        <p className="text-center text-xs text-[#C8C8C8] py-2">
                                             Clicking the <strong>&quot;Send Request&quot;</strong> button below constitutes your 
                                             express written consent to be called and/or texted by CMVC 
                                             at the number(s) provided.
