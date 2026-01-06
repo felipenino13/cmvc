@@ -47,10 +47,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${program.title} | TecMD`,
+    title: `${program.title} | CMVC`,
     description: program.description,
     openGraph: {
-      title: `${program.title} | TecMD`,
+      title: `${program.title} | CMVC`,
       description: program.description,
       url: `/programs/${program.slug}`,
       images: [
@@ -94,7 +94,7 @@ export default async function ProgramPage({ params }: Props) {
             />
             <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10">
                 <div className="content-center grid gap-2">
-                    <div>
+                    <div className="flex gap-8">
                         <Image 
                             src={INFO_GENERAL.logoWhite}
                             //"/logos/logo-cmvc-white.svg"
@@ -103,6 +103,15 @@ export default async function ProgramPage({ params }: Props) {
                             height={80}
                             className="pb-4"
                         />
+                        {campusData?.label && (
+                        <Image
+                            src={campusData.label}
+                            alt={program.title}
+                            width={100} 
+                            height={80}
+                            className="pb-4"                            
+                        />  
+                        )}
                     </div>
                     <h1 className="text-6xl text-white">
                         {program.title}
@@ -242,13 +251,13 @@ export default async function ProgramPage({ params }: Props) {
         }
         <div className="bg-[#FFFFFF] px-2">
             <div className="max-w-5xl mx-auto gap-8 py-10 grid sm:grid-cols-2 grid-cols-1">
-                <div className="m-auto relative">
+                <div className="m-auto relative bg-[url(/programs/rombo-cmvc.svg)] bg-left bg-contain bg-no-repeat p-10">
                     <Image 
                         src={program.learnProgram.learnImg}
-                        alt="Medical Assistant Dallas Program"
+                        alt={program.title}
                         width={400}
                         height={600}
-                        className="z-[2]"
+                        className="z-10"
                     />
                 </div>
                 <div className="content-center grid gap-4">
@@ -468,7 +477,9 @@ export default async function ProgramPage({ params }: Props) {
         <div className="bg-[#013765] px-2 py-10 grid gap-8">
             <div className="max-w-5xl mx-auto gap-8 grid grid-cols-1">
                 <h2 className="text-center text-3xl text-white">
-                    Visit or Contact the CMVC {program.campus} Campus
+                    {campusData?.id === "National"
+                    ? "Contact CMVC National Admissions"
+                    : `Visit or Contact the ${campusData?.name}`}
                 </h2>
             </div>
             <div className="max-w-5xl mx-auto gap-8 grid sm:grid-cols-3 grid-cols-1 ">

@@ -6,6 +6,7 @@ export type Campus = {
   address: string;
   email: string;
   phone: string;
+  label: string;
 };
 
 export const CAMPUSES: Campus[] = [
@@ -17,6 +18,7 @@ export const CAMPUSES: Campus[] = [
     address: "8131 Lyndon B. Johnson, Suite 300, Dallas, Texas",
     email: "dleonard@compumed.edu",
     phone: "972-301-8459",
+    label: "",
   },
 
   {
@@ -24,9 +26,10 @@ export const CAMPUSES: Campus[] = [
     name: "CMVC National",
     city: "",
     state: "",
-    address: "...",
+    address: "",
     email: "Fbanos@compumed.edu",
     phone: "305-788-1854",
+    label: "/programs/label-national.png",
   },
 
   {
@@ -37,6 +40,7 @@ export const CAMPUSES: Campus[] = [
     address: "3075 W Oakland Park Blvd, Oakland Park, FL 33111",
     email: "Famclure@compumed.edu",
     phone: "954-332-9904",
+    label: "",
   },
 
 ];
