@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Field, FieldLabel } from "@/components/ui/field";
 
+type LandingFormProps = { programaTitle: string };
 type UTMParams = Record<string, string>;
 
 type LeadData = Record<string, any>;
@@ -70,7 +71,7 @@ async function fetchIpAndInfo() {
   };
 }
 
-export default function FormLanding() {
+export default function FormLanding({ programaTitle }: LandingFormProps) {
   // endpoints
   const verityLeadpostUrl = "https://api.verityiq.com/api/leadpost";
   const domainUrl = "https://www.compumed.edu/wp-content/";
@@ -290,7 +291,7 @@ export default function FormLanding() {
     if (zipRef.current) zipRef.current.value = "";
 
     setTimeout(() => {
-      window.location.href = "https://www.compumed.edu/la-thank-you-page/?la-dallas-home-health-Aide";
+      window.location.href = "https://www.compumed.edu/la-thank-you-page/";
     }, 800);
   }
 
@@ -422,7 +423,7 @@ export default function FormLanding() {
                     name="program" 
                     id="program"
                     type="hidden"
-                    value="program"
+                    value={programaTitle}
                 />
                 </Field>
             </div>

@@ -118,7 +118,9 @@ export default async function ProgramPage({ params }: Props) {
                         <h2 className="text-white text-2xl text-center">
                             Start Now
                         </h2>
-                        <FormLanding />
+                        <FormLanding 
+                            programaTitle={program.title} 
+                        />
                     </div>
                 </div>
             </div>
