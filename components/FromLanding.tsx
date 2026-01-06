@@ -3,7 +3,10 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Field, FieldLabel } from "@/components/ui/field";
 
-type LandingFormProps = { programaTitle: string };
+type LandingFormProps = { 
+    programaTitle: string; 
+    campus: string;
+};
 type UTMParams = Record<string, string>;
 
 type LeadData = Record<string, any>;
@@ -71,7 +74,7 @@ async function fetchIpAndInfo() {
   };
 }
 
-export default function FormLanding({ programaTitle }: LandingFormProps) {
+export default function FormLanding({ programaTitle, campus }: LandingFormProps) {
   // endpoints
   const verityLeadpostUrl = "https://api.verityiq.com/api/leadpost";
   const domainUrl = "https://www.compumed.edu/wp-content/";
@@ -128,10 +131,10 @@ export default function FormLanding({ programaTitle }: LandingFormProps) {
     () => ({
       veritySysKey: "M2dX9rB1",
       tenantid: 52,
-      campus: "Dallas",
+      campus: {campus},
       schoolname,
-      campaigntype: "Dallas",
-      campaigncode: "Dallas",
+      campaigntype: {campus},
+      campaigncode: {campus},
       language: "English",
       channel: "Website",
       leadsource: leadSource, // 👈 aquí
@@ -308,7 +311,7 @@ export default function FormLanding({ programaTitle }: LandingFormProps) {
                     type="hidden" 
                     name="campus" 
                     id="campus" 
-                    value="Dallas"
+                    value={campus}
                 />
                 <Field className="gap-1 mt-2">
                 <FieldLabel className="text-white" htmlFor="name">

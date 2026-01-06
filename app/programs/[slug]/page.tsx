@@ -1,6 +1,8 @@
 //data
 import { INFO_GENERAL } from "@/data/general";
 import { PROGRAMS } from "@/data/programs";
+import { CAMPUSES } from "@/data/campuses";
+import Link from "next/link";
 
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -67,10 +69,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function ProgramPage({ params }: Props) {
-  const { slug } = await params;
+    const { slug } = await params;
 
-  const program = PROGRAMS.find((p) => p.slug === slug);
-  if (!program) notFound();
+    const program = PROGRAMS.find((p) => p.slug === slug);
+    if (!program) notFound();
+
+    const campusData = CAMPUSES.find((c) => c.id === program.campus);  
 
   return (
     <>
@@ -120,6 +124,7 @@ export default async function ProgramPage({ params }: Props) {
                         </h2>
                         <FormLanding 
                             programaTitle={program.title} 
+                            campus={program.campus}
                         />
                     </div>
                 </div>
@@ -467,31 +472,44 @@ export default async function ProgramPage({ params }: Props) {
                 </h2>
             </div>
             <div className="max-w-5xl mx-auto gap-8 grid sm:grid-cols-3 grid-cols-1 ">
-                <div className="text-center">
-                    <p className="flex justify-center items-center text-white">
-                        <MapPin size={40} className="px-2"/> Location
-                    </p>
-                    <p className="text-white">
-                        8131 Lyndon B. Johnson, Suite 300, <br></br>
-                        Dallas, Texas
-                    </p>
-                </div>
-                <div className="text-center">
-                    <p className="flex justify-center items-center text-white">
-                        <Mail size={40} className="px-2"/> Email
-                    </p>
-                    <p className="text-white">
-                       dleonard@compumed.edu
-                    </p>
-                </div>
-                <div className="text-center">
-                    <p className="flex justify-center items-center text-white">
-                        <Smartphone size={40} className="px-2"/> Phone
-                    </p>
-                    <p className="text-white">
-                       972-301-8459
-                    </p>
-                </div>
+                {campusData?.address && (
+                    <div className="text-center">
+                            <p className="flex justify-center items-center text-white">
+                                <MapPin size={40} className="px-2"/> Location
+                            </p>
+                            <p className="text-white">
+                                {campusData?.address}
+                            </p>    
+                    </div>
+                )}
+                {campusData?.email && (
+                    <div className="text-center">
+                        <p className="flex justify-center items-center text-white">
+                            <Mail size={40} className="px-2"/> Email
+                        </p>
+                        <a
+                        href={`mailto:${campusData.email}`}
+                        className="text-white underline hover:text-[#FFC316]"
+                        aria-label={`Send email to ${campusData.email}`}
+                        >
+                        {campusData.email}
+                        </a>
+                    </div>
+                )}
+                {campusData?.phone && (
+                    <div className="text-center">
+                        <p className="flex justify-center items-center text-white">
+                            <Smartphone size={40} className="px-2"/> Phone
+                        </p>
+                        <a
+                            href={`tel:${campusData.phone.replace(/\D/g, "")}`}
+                            className="text-white underline hover:text-[#FFC316]"
+                            aria-label={`Call ${campusData.phone}`}
+                        >
+                        {campusData.phone}
+                        </a>
+                    </div>
+                )}
             </div>
         </div>
     </>

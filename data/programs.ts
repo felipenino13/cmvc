@@ -253,79 +253,130 @@ export const PROGRAMS: Program [] = [
 
     }),
 
-    makeProgram({
-      title: "Home Health Aide",
+  makeProgram({
+    title: "Home Health Aide",
+    description:
+      "Caring for others is more than just a job—it’s a meaningful career. At CMVC, our Home Health Aide program prepares you for a rewarding role in the healthcare field, providing essential care and support to patients in their homes.",
+    campus: "Dallas",
+    subtitle: "Make a Difference Every Day with a Rewarding Career in Healthcare!",
+    imgHero: "/programs/home-health-aide-dallas-hero.jpg",
+    programLength: "4 weeks",
+    totalCredits: "",
+    totalCourses: "",
+
+    // Block 1 (white section: “Start Your Career in Home Healthcare with CMVC”)
+    descriptionProgram: {
+      descriptionTitle: "Start Your Career in Home Healthcare with CMVC",
       description:
         "Caring for others is more than just a job—it’s a meaningful career. At CMVC, our Home Health Aide program prepares you for a rewarding role in the healthcare field, providing essential care and support to patients in their homes.",
-      campus: "Dallas",
-      subtitle:
-        "Make a Difference Every Day with a Rewarding Career in Healthcare!",
-      imgHero: "/programs/home-health-aide-dallas-hero.jpg",
-      programLength: "4 weeks",
-      totalCredits: "",
-      totalCourses: "",
+      bulletsDescription: [
+        "Graduate without federal student loan debt",
+        "Short program you can complete quickly",
+        "Training focused on real home healthcare tasks",
+      ],
+      descriptionImg: "/programs/home-health-aide-dallas-01.jpg",
+    },
 
-      // Bloque: "Start Your Career in Home Healthcare with CMVC"
-      descriptionProgram: {
-        descriptionTitle: "Start Your Career in Home Healthcare with CMVC",
-        description:
-          "Caring for others is more than just a job—it’s a meaningful career. At CMVC, our Home Health Aide program prepares you for a rewarding role in the healthcare field, providing essential care and support to patients in their homes.",
-        bulletsDescription: [],
-        descriptionImg: "/programs/home-health-aide-dallas-01.jpg",
-      },
+    // Block 2 (white section with checklist: “What Does a Home Health Aide Do?”)
+    realExperience: {
+      experienceTitle: "What Does a Home Health Aide Do?",
+      experienceDescription:
+        "Home Health Aides (HHAs) work under the supervision of a licensed nurse to assist patients with daily living activities, offering both physical and emotional support. Their responsibilities include:",
+      experienceImg: "/programs/home-health-aide-dallas-02.jpg",
+    },
 
-      // Bloque con bullets: definición HHA + tareas (lista)
-      realExperience: {
-        experienceTitle: "",
-        experienceDescription:
-          "Home Health Aides (HHA) work under the supervision of a licensed nurse to assist patients with daily living activities, offering both physical and emotional support. Their responsibilities include:",
-        experienceImg: "/programs/home-health-aide-dallas-02.jpg",
-      },
+    // Block 3 (navy section: “Career Opportunities”)
+    learnProgram: {
+      learnTitle: "Career Opportunities",
+      learnDescription:
+        "Graduates of our Home Health Aide program can work in various settings, including:",
+      learnBullets: [
+        "Private homes providing one-on-one care",
+        "Home healthcare agencies",
+        "Assisted living facilities",
+        "Hospice and palliative care settings",
+        "With growing demand for home healthcare services, HHAs can have strong job stability and multiple employment opportunities.",
+      ],
+      learnImg: "/programs/home-health-aide-dallas-03.jpg",
+    },
 
-      // En tu landing este bloque realmente es una lista de tareas; lo mapeo a learnProgram
-      learnProgram: {
-        learnTitle: "",
-        learnDescription:
-          "Home Health Aides (HHA) work under the supervision of a licensed nurse to assist patients with daily living activities, offering both physical and emotional support. Their responsibilities include:",
-        learnBullets: [
-          "Helping patients with personal hygiene, such as bathing and dressing.",
-          "Assisting with mobility and basic exercises.",
-          "Monitoring vital signs and reporting any health concerns.",
-          "Preparing meals and ensuring proper nutrition.",
-          "Providing companionship and emotional support.",
-          "Following patient care plans developed by healthcare professionals.",
-        ],
-        learnImg: "/programs/home-health-aide-dallas-03.jpg",
-      },
+    // Block 4 (white section: “Program Description and Objective”)
+    additionalCertifications: {
+      certificationsTitle: "Program Description and Objective",
+      certificationsDescription:
+        "The Home Health Aide program at CMVC prepares students with the essential knowledge and hands-on skills needed to provide quality home healthcare, including patient care, communication, and ethical practices, in a program completed in approximately 4 weeks.",
+      certificationsImg: "/programs/home-health-aide-dallas-04.jpg",
+    },
 
-      // Bloque: "Career Opportunities"
-      additionalCertifications: {
-        certificationsTitle: "Career Opportunities",
-        certificationsDescription:
-          "Graduates of our Home Health Aide program can work in various settings, including:",
-        certificationsImg: "/programs/home-health-aide-dallas-04.jpg",
-      },
-
-      // Como tu estructura no tiene un bloque específico para bullets de Career Opportunities,
-      // lo dejamos para que lo uses donde renderizas bullets (si quieres, creo un type nuevo luego).
-      // Por ahora, outcomesSection lo dejamos vacío para que NO se renderice.
-      outcomesSection: {
-        outcomesTitle: "",
-        outcomesSubtitle: "",
-        outcomes: [],
-      },
-
-      faqSection:{
-          faqTitle: "",
-          faqs:[
-            {
-              question: "",
-              answer: "", 
-            }
-          ]
+    // Block 5 (white section: “Additional Training at No Extra Cost”)
+    outcomesSection: {
+      outcomesTitle: "Additional Training at No Extra Cost",
+      outcomesSubtitle:
+        "To enhance your skills and employa11bility, CMVC provides 10 additional in-service trainings for free, covering key topics such as:",
+      outcomes: [
+        {
+          icon: "badge",
+          title: "Infection Control and Safety",
+          description:
+            "Learn essential safety practices to protect patients and reduce risk in home care settings.",
         },
-  }),
+        {
+          icon: "badge",
+          title: "Specialized Care Techniques",
+          description:
+            "Build skills for supporting elderly and disabled patients with confidence and compassion.",
+        },
+        {
+          icon: "badge",
+          title: "Patient Rights and Ethics",
+          description:
+            "Understand responsibilities, patient rights, and ethical guidelines in home healthcare.",
+        },
+        {
+          icon: "badge",
+          title: "Job-Ready Support Skills",
+          description:
+            "Strengthen practical skills that help you succeed on day one in real-world care environments.",
+        },
+      ],
+    },
 
-  
+    // FAQ (no accordion visible on this landing capture; filled with sensible defaults for the program)
+    faqSection: {
+      faqTitle: "Frequently Asked Questions",
+      faqs: [
+        {
+          question: "How long is the Home Health Aide program?",
+          answer:
+            "The program is approximately 4 weeks and includes a minimum of 75 clock hours.",
+        },
+        {
+          question: "What does a Home Health Aide do?",
+          answer:
+            "HHAs assist patients with daily living activities and provide physical and emotional support under the supervision of a licensed nurse.",
+        },
+        {
+          question: "Where can I work after completing the program?",
+          answer:
+            "Graduates may work in private homes, home healthcare agencies, assisted living facilities, or hospice and palliative care settings.",
+        },
+        {
+          question: "Is there additional training included?",
+          answer:
+            "Yes. CMVC provides additional in-service trainings at no extra cost to enhance your skills and employability.",
+        },
+        {
+          question: "Do I need prior healthcare experience to apply?",
+          answer:
+            "Many students start without prior experience. If you’re motivated and ready to start, CMVC can help you take the first step.",
+        },
+        {
+          question: "How do I get more information or start?",
+          answer:
+            "Fill out the form on this page and our admissions team will contact you with next steps.",
+        },
+      ],
+    },
+  }),
 
 ]
