@@ -2,7 +2,6 @@
 import { INFO_GENERAL } from "@/data/general";
 import { PROGRAMS } from "@/data/programs";
 import { CAMPUSES } from "@/data/campuses";
-import Link from "next/link";
 
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
@@ -12,9 +11,6 @@ import { MapPin } from "lucide-react";
 import { Mail } from "lucide-react";
 import { Smartphone } from "lucide-react";
 import { BadgeCheck } from "lucide-react";
-import { Star } from "lucide-react";
-import { BriefcaseBusiness } from "lucide-react";
-import { Shield } from "lucide-react";
 
 //components
 import FormLanding from "@/components/FromLanding";
@@ -457,7 +453,10 @@ export default async function ProgramPage({ params }: Props) {
                         <Accordion type="single" collapsible className="w-full text-black">
                             {program.faqSection.faqs
                             .map((faq, index) => (
-                                <AccordionItem value={"value"+index} >
+                                <AccordionItem 
+                                    key={`${faq.question}-${index}`}   // ✅ key aquí
+                                    value={`value-${index}`}
+                                >
                                     <AccordionTrigger key={index}>{faq.question}</AccordionTrigger>
                                     <AccordionContent>
                                         {faq.answer}
