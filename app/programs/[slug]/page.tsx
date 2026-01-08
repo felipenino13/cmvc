@@ -78,6 +78,12 @@ export default async function ProgramPage({ params }: Props) {
         campusData?.phone,
     ].filter(Boolean).length;
 
+    const programInfoCount = [
+        program?.programLength,
+        program?.totalCredits,
+        program?.totalCourses,
+    ].filter(Boolean).length;
+
 
   return (
     <>
@@ -185,7 +191,12 @@ export default async function ProgramPage({ params }: Props) {
                                 height={600}
                             />
                         </div>
-                        <div className="grid grid-cols-3 text-black p-4 text-sm">
+                        <div className={`grid text-black p-4 text-sm ${
+                            programInfoCount === 3
+                            ? "sm:grid-cols-3"
+                            : programInfoCount === 2
+                            ? "sm:grid-cols-2"
+                            : "sm:grid-cols-1"}`}>
                             {program.programLength && (
                                 <div>
                                     <p>
