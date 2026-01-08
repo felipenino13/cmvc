@@ -622,5 +622,239 @@ makeProgram({
   },
 }),
 
+makeProgram({
+  title: "Associate of Science in Nursing Degree",
+  description:
+    "The Associate of Science in Nursing (ASN) Degree at CMVC prepares students with the clinical knowledge, hands-on training, and professional competencies required to become entry-level registered nurses in diverse healthcare settings.",
+  campus: "Fort Lauderdale",
+  subtitle: "Begin your journey toward becoming a Registered Nurse",
+  imgHero: "/programs/asn-fort-lauderdale-hero.jpg",
+
+  programLength: "Approx. 20 months",
+  totalCredits: "72",
+  totalCourses: "16",
+
+  descriptionProgram: {
+    descriptionTitle: "ASN Nursing Program Overview",
+    description:
+      "The Associate of Science in Nursing program at CMVC is designed to develop safe, competent, and compassionate nurses. The curriculum combines classroom instruction, laboratory practice, and supervised clinical experiences to prepare graduates for the NCLEX-RN exam and professional nursing practice.",
+    bulletsDescription: [
+      "Comprehensive nursing theory and clinical instruction",
+      "Hands-on training in real healthcare environments",
+      "Preparation for the NCLEX-RN licensure exam",
+    ],
+    descriptionImg: "/programs/asn-fort-lauderdale-01.jpg",
+  },
+
+  realExperience: {
+    experienceTitle: "Hands-On Clinical Experience",
+    experienceDescription:
+      "Students gain real-world experience through supervised clinical rotations in hospitals and healthcare facilities. These experiences allow students to apply theoretical knowledge, develop clinical judgment, and build confidence in patient care.",
+    experienceImg: "/programs/asn-fort-lauderdale-02.jpg",
+  },
+
+  learnProgram: {
+    learnTitle: "What You’ll Learn in Nursing School",
+    learnDescription:
+      "The ASN program provides a strong foundation in nursing knowledge, patient-centered care, and clinical skills needed to succeed as a registered nurse in today’s healthcare system.",
+    learnBullets: [
+      "Fundamentals of nursing practice and patient care",
+      "Medical-surgical, maternal, pediatric, and mental health nursing",
+      "Pharmacology and medication administration",
+      "Critical thinking, clinical decision-making, and patient safety",
+      "Professional ethics, communication, and teamwork in healthcare",
+    ],
+    learnImg: "/programs/asn-fort-lauderdale-03.jpg",
+  },
+
+  additionalCertifications: {
+    certificationsTitle: "Licensure and Career Advancement",
+    certificationsDescription:
+      "Graduates of the ASN program are eligible to apply for the NCLEX-RN examination. Upon licensure, students may pursue employment as Registered Nurses in hospitals, clinics, long-term care facilities, and other healthcare environments.",
+    certificationsImg: "/programs/asn-fort-lauderdale-04.jpg",
+  },
+
+  outcomesSection: {
+    outcomesTitle: "What You’ll Be Ready to Do After Graduation",
+    outcomesSubtitle:
+      "CMVC prepares you with the knowledge and skills to confidently enter the nursing profession.",
+    outcomes: [
+      {
+        icon: "badge",
+        title: "Provide Safe and Effective Patient Care",
+        description:
+          "Deliver evidence-based nursing care across diverse patient populations.",
+      },
+      {
+        icon: "badge",
+        title: "Work as a Registered Nurse",
+        description:
+          "Practice as an entry-level RN in hospitals, clinics, and healthcare facilities.",
+      },
+      {
+        icon: "badge",
+        title: "Apply Clinical Judgment and Critical Thinking",
+        description:
+          "Assess patient needs, plan interventions, and evaluate outcomes effectively.",
+      },
+      {
+        icon: "badge",
+        title: "Collaborate Within Healthcare Teams",
+        description:
+          "Communicate professionally with physicians, nurses, patients, and families.",
+      },
+    ],
+  },
+
+  faqSection: {
+    faqTitle: "Frequently Asked Questions",
+    faqs: [
+      {
+        question: "What is an Associate of Science in Nursing (ASN)?",
+        answer:
+          "An ASN is a nursing degree that prepares students to become Registered Nurses (RNs) through academic instruction and clinical training.",
+      },
+      {
+        question: "How long does the ASN program take to complete?",
+        answer:
+          "The program typically takes about 20 months to complete, depending on the schedule and course sequence.",
+      },
+      {
+        question: "What are the admission requirements for the ASN program?",
+        answer:
+          "Applicants must meet CMVC admission requirements, including a high school diploma or equivalent, prerequisite courses, and entrance assessments.",
+      },
+      {
+        question: "Can I take the NCLEX-RN after graduating?",
+        answer:
+          "Yes. Graduates of the ASN program are eligible to apply for the NCLEX-RN licensure exam.",
+      },
+      {
+        question: "Where can I work after completing the ASN program?",
+        answer:
+          "Graduates may work in hospitals, clinics, long-term care facilities, rehabilitation centers, and other healthcare settings.",
+      },
+      {
+        question: "Is employment guaranteed after graduation?",
+        answer:
+          "Employment is not guaranteed, but CMVC provides career guidance and job placement assistance to support graduates in their job search.",
+      },
+    ],
+  },
+}),
+
+makeProgram({
+  title: "Emergency Medical Technician (EMT) Program",
+  description:
+    "If you’re passionate about helping others and want a stable healthcare career, the EMT program at CMVC prepares you to respond in emergencies and make a real difference.",
+  campus: "Hialeah",
+  subtitle: "Start Your Career in 4 Months",
+  imgHero: "/programs/emt-hero.jpg",
+
+  programLength: "4 months (16 weeks)",
+  totalCredits: "",
+  totalCourses: "",
+
+  descriptionProgram: {
+    descriptionTitle: "Program Overview",
+    description:
+      "The EMT program at CMVC is designed to prepare students with the knowledge and hands-on training needed to respond to emergency situations and support patient care in the field.",
+    bulletsDescription: [
+      "Duration: 4 months (16 weeks) / 300 total hours",
+      "In-person training with simulations and clinical experience",
+      "Hands-on preparation for emergency response roles",
+    ],
+    descriptionImg: "/programs/emt-program-overview.jpg",
+  },
+
+  realExperience: {
+    experienceTitle: "In-Person Training with Simulations and Clinical Experience",
+    experienceDescription:
+      "Train in a real-world learning environment with hands-on simulations and clinical practice that help you build confidence for emergency response situations.",
+    experienceImg: "/programs/emt-real-experience.jpg",
+  },
+
+  learnProgram: {
+    learnTitle: "What You Will Learn",
+    learnDescription:
+      "The program covers essential EMT knowledge and skills to help you respond to emergencies, support patient safety, and work effectively under pressure.",
+    learnBullets: [
+      "Pre-hospital care for medical emergencies",
+      "Basic Life Support (BLS) and airway management",
+      "Patient assessment and trauma management",
+      "Use of medical equipment and safe patient transport",
+      "Emergency protocols and effective teamwork",
+    ],
+    learnImg: "/programs/emt-what-you-will-learn.jpg",
+  },
+
+  additionalCertifications: {
+    certificationsTitle: "Admission Requirements",
+    certificationsDescription:
+      "Applicants must meet basic eligibility requirements before starting the EMT program.",
+    certificationsImg: "/programs/emt-admissions.jpg",
+  },
+
+  outcomesSection: {
+    outcomesTitle: "Learning Outcomes",
+    outcomesSubtitle: "By the end of the program, you will be able to:",
+    outcomes: [
+      {
+        icon: "badge",
+        title: "Assess and Stabilize Patients",
+        description: "Recognize patient needs and act in emergency situations.",
+      },
+      {
+        icon: "badge",
+        title: "Apply Life-Saving Procedures",
+        description: "Perform critical interventions with precision and care.",
+      },
+      {
+        icon: "badge",
+        title: "Work Calmly Under Pressure",
+        description: "Respond professionally in high-stress environments.",
+      },
+      {
+        icon: "badge",
+        title: "Follow Emergency Protocols",
+        description: "Support safe outcomes using established EMS procedures.",
+      },
+    ],
+  },
+
+  faqSection: {
+    faqTitle: "Frequently Asked Questions (FAQs)",
+    faqs: [
+      {
+        question: "How long is the program?",
+        answer: "The EMT program is 4 months (16 weeks) and includes 300 total hours.",
+      },
+      {
+        question: "Do I need previous experience?",
+        answer:
+          "No previous experience is required. The program is designed to train students from the ground up.",
+      },
+      {
+        question: "Is the program in-person?",
+        answer: "Yes, with simulations and clinical practice.",
+      },
+      {
+        question: "What are the admission requirements?",
+        answer:
+          "Must be at least 18 years old, have a high school diploma or GED, valid ID and Social Security Number, pass a medical exam, up-to-date vaccinations, and drug test. CPR/BLS certification is required (or can be completed during the program).",
+      },
+      {
+        question: "Where can EMT graduates work?",
+        answer:
+          "Graduates may work in ambulance services, fire departments with EMS, emergency rooms and urgent care clinics, and medical transport companies.",
+      },
+      {
+        question: "What is the career outlook for EMTs?",
+        answer:
+          "EMTs are in high demand in Florida and across the U.S., with opportunities in multiple emergency and healthcare settings.",
+      },
+    ],
+  },
+}),
 
 ]
