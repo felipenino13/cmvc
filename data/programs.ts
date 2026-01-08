@@ -749,7 +749,7 @@ makeProgram({
     "If you’re passionate about helping others and want a stable healthcare career, the EMT program at CMVC prepares you to respond in emergencies and make a real difference.",
   campus: "Hialeah",
   subtitle: "Start Your Career in 4 Months",
-  imgHero: "/programs/emt-hero.jpg",
+  imgHero: "/programs/emt-hero-v1.jpg",
 
   programLength: "4 months (16 weeks)",
   totalCredits: "",
@@ -785,7 +785,7 @@ makeProgram({
       "Use of medical equipment and safe patient transport",
       "Emergency protocols and effective teamwork",
     ],
-    learnImg: "/programs/emt-what-you-will-learn.jpg",
+    learnImg: "/programs/emt-program-what-you-will-learn.jpg",
   },
 
   additionalCertifications: {

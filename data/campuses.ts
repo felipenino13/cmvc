@@ -43,4 +43,26 @@ export const CAMPUSES: Campus[] = [
     label: "",
   },
 
+  {
+    id: "Hialeah",
+    name: "CMVC Hialeah Campus",
+    city: "Hialeah",
+    state: "Florida",
+    address: "2900 West 12th Avenue. 3rd Floor. Hialeah, FL 33012",
+    email: "",
+    phone: "954-332-9904",
+    label: "",
+  },
+
+  {
+    id: "Kendall",
+    name: "CMVC Kendall Campus",
+    city: "Kendall",
+    state: "Florida",
+    address: "11401 SW 40 Street. Suite 150, 1st Floor. Miami, FL 33165",
+    email: "",
+    phone: "(305) 553-2898",
+    label: "",
+  },
+
 ];

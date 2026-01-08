@@ -72,6 +72,13 @@ export default async function ProgramPage({ params }: Props) {
 
     const campusData = CAMPUSES.find((c) => c.id === program.campus);  
 
+    const campusInfoCount = [
+        campusData?.address,
+        campusData?.email,
+        campusData?.phone,
+    ].filter(Boolean).length;
+
+
   return (
     <>
         {
@@ -481,7 +488,14 @@ export default async function ProgramPage({ params }: Props) {
                     : `Visit or Contact the ${campusData?.name}`}
                 </h2>
             </div>
-            <div className="max-w-5xl mx-auto gap-8 grid sm:grid-cols-3 grid-cols-1 ">
+            <div className={`max-w-5xl mx-auto gap-8 grid ${
+                campusInfoCount === 3
+                ? "sm:grid-cols-3"
+                : campusInfoCount === 2
+                ? "sm:grid-cols-2"
+                : "sm:grid-cols-1"
+            } grid-cols-1`}
+            >
                 {campusData?.address && (
                     <div className="text-center">
                             <p className="flex justify-center items-center text-white">
