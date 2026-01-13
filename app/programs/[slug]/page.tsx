@@ -90,7 +90,16 @@ export default async function ProgramPage({ params }: Props) {
         {
             //Banner Hero
         }
-        <div className="px-2 py-10">
+        <div 
+            className="px-2 py-10 b bg-cover bg-center"
+            style={{
+            backgroundImage: `url(${program.imgHero})`,
+            }}
+        >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-[#223262]/70" />
+
+            {/*
             <Image
                 src={program.imgHero}
                 alt={program.title}
@@ -101,7 +110,8 @@ export default async function ProgramPage({ params }: Props) {
                 fetchPriority="high"
                 quality={65}
             />
-            <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10">
+            */}
+            <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-10 relative z-10">
                 <div className="content-center grid gap-2">
                     <div className="flex gap-8">
                         <Image 
@@ -152,7 +162,7 @@ export default async function ProgramPage({ params }: Props) {
         {
             //Objective program
         }
-        <div className="bg-[#FAFAFA] px-2">
+        <div className="bg-[#FAFAFA] px-2 relative z-10">
             <div className="max-w-5xl mx-auto grid sm:grid-cols-2 grid-cols-1 py-10 gap-8">
                 <div className="gap-4 grid content-center"> 
                     {program.descriptionProgram.descriptionTitle && (
@@ -191,6 +201,7 @@ export default async function ProgramPage({ params }: Props) {
                                 height={600}
                             />
                         </div>
+                        {/* Overlay */}
                         <div className={`grid text-black p-4 text-sm ${
                             programInfoCount === 3
                             ? "sm:grid-cols-3"
@@ -363,9 +374,9 @@ export default async function ProgramPage({ params }: Props) {
                 </div>
                 <div>
                     <Image 
-                        src="/programs/medical-assistant-dallas-06.jpg"
+                        src="/programs/modelos-cmvc.png"
                         alt="Medical Assistant Dallas Program"
-                        width={1400}
+                        width={400}
                         height={600}
                     />
                 </div>

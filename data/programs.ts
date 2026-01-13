@@ -92,7 +92,7 @@ export const PROGRAMS: Program [] = [
         description: "In this program, students are prepared with the technical skills and practical training necessary for entry-level positions as a Medical Assistant. Students will gain proficiency in performing a variety of clinical and administrative duties to assist physicians and ensure efficient healthcare delivery.",
         campus: "Dallas",
         subtitle: "Start your career in healthcare as a Medical Assistant",
-        imgHero:"/programs/medical-assistant-dallas-hero.jpg",
+        imgHero:"/programs/medical-assistant-dallas-hero.png",
         programLength:"11 monts",
         totalCredits:"32.5",
         totalCourses: "14",
@@ -105,12 +105,12 @@ export const PROGRAMS: Program [] = [
             "Medical office & administrative procedures",
             "Preparation for entry-level employment in healthcare",
           ],
-          descriptionImg : "/programs/medical-assistant-dallas-08.jpg",
+          descriptionImg : "/programs/medical-assistant-dallas-08.png",
         },
         realExperience: {
           experienceTitle: "Gain Real-World Experience Before You Graduate",
           experienceDescription: "At CompuMed, you’ll gain hands-on experience as part of the program, preparing you for a real-world career. Through our onsite externship, you’ll work in hospitals and medical centers to gain practical experience before you graduate.",
-          experienceImg : "/programs/medical-assistant-dallas-02.jpg",
+          experienceImg : "/programs/medical-assistant-dallas-02.png",
         },
         learnProgram:  {
           learnTitle: "What You’ll Actually Learn and Practice in This Program",
@@ -122,13 +122,13 @@ export const PROGRAMS: Program [] = [
             "Professional & Ethical Foundations – Medical laws, ethics, professionalism, and cultural sensitivity.",
             "Career-Focused Experience – Externship opportunities that connect you with real healthcare professionals.",
           ],
-          learnImg: "/programs/medical-assistant-dallas-03.jpg",
+          learnImg: "/programs/medical-assistant-dallas-03.png",
         },
 
         additionalCertifications: {
           certificationsTitle: "Expand Your Career Opportunities with Additional Certifications",
           certificationsDescription: "In addition to the Medical Assistant Diploma, you will get knowledge of Phlebotomy and Electrocardiogram. These broaden your job prospects in hospitals, clinics, and medical offices, making you a more competitive candidate in the healthcare industry.",
-          certificationsImg: "/programs/medical-assistant-dallas-04.jpg",
+          certificationsImg: "/programs/medical-assistant-dallas-04.png",
         },
 
         outcomesSection: {
